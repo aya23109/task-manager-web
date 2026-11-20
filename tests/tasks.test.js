@@ -45,3 +45,10 @@ test("removeTask supprime uniquement la tâche demandée", function () {
     assert.strictEqual(tasks.length, 3);
     assert.strictEqual(tasks[0].title, "Corriger les TP");
 });
+test("addTask supprime les espaces inutiles", function () {
+    const tasks = defaultTasks();
+
+    addTask(tasks, "   Apprendre Python   ");
+
+    assert.strictEqual(tasks[4].title, "Apprendre Python");
+});
