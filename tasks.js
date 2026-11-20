@@ -15,7 +15,7 @@ function addTask(tasks, title) {
         return tasks;
     }
 
-    tasks.push({ title: clean, done: true });
+    tasks.push({ title: clean, done: false });
     return tasks;
 }
 
